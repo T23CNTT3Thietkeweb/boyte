@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: auto;
+}
+.khung{
+	width: 450px;
+	height: 350px;
+	border: solid 1px #000000;
+}
+.chu{
+	color: #289C12;
+	text-align: center;
+}
+

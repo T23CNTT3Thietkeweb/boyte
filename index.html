@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<link href="styles/dinhdang1.css" type="text/css" rel="stylesheet"/>
+<script>
+	function validate(){
+		if(document.myform.hoten.value == "")
+			{
+				alert("Vui lòng nhập họ tên");
+				document.myform.hoten.focus();
+				return false;
+			}
+			if(document.myform.diachi.value == "")
+			{
+				alert("Vui lòng nhập địa chỉ");
+				document.myform.diachi.focus();
+				return false;
+			}
+			if(document.myform.dienthoai.value == "")
+			{
+				alert("Vui lòng nhập điện thoại");
+				document.myform.dienthoai.focus();
+				return false;
+			}
+			if(document.myform.songuoi.value == "")
+			{
+				alert("Vui lòng nhập số người dự đoán tham gia");
+				document.myform.songuoi.focus();
+				return false;
+			}
+		return (true);
+	}
+	function dongy(){
+		var str="Bạn đã đăng ký thành công!!!"
+		document.getElementById("demo").innerHTML = str;
+	}
+</script>
+</head>
+<body>
+	<div class="khung">
+		<h3 class="chu">Phiếu đăng ký tham gia chương trình khuyến mãi</h3>
+	<form name="myform">
+	<table width="400" border="1">
+    <tr>
+      <td> Họ tên</td>
+      <td><input type="text" name="hoten"></td>
+    </tr>
+    <tr>
+      <td>Địa chỉ</td>
+      <td><input type="text" name="diachi" ></td>
+    </tr>
+    <tr>
+       <td>Điện thoại</td>
+      <td><input type="text" name="dienthoai"></td>
+    </tr>
+    <tr>
+       <td>Phái</td>
+      <td><input type="radio" name="radio" id="radio" value="radio">Nam&nbsp; &nbsp; &nbsp;
+         <input type="radio" name="radio2" id="radio2" value="radio2">
+        Nữ </label></td>
+    </tr>
+    <tr>
+      <td>Nghề nghiệp</td>
+      <td>
+        <select >
+			<option>Giáo viên</option>
+			<option>Bác sỹ</option>
+			<option>Kỹ sư</option>
+			<option>Khác</option>
+        </select></td>
+    </tr>
+    <tr>
+       <td>Chọn sản phẩm tham gia</td>
+        <td>
+        <select multiple="multiple">
+			<option>Kem đánh răng</option>
+			<option>Bột giặt</option>
+			<option>Dầu gội </option>
+			<option>Sữa tắm</option>
+        </select></td>
+    </tr>
+    <tr>
+       <td>Chọn số người dự đoán</td>
+      <td><input type="text" name="songuoi"></td>
+    </tr>
+    <tr>
+       <td colspan="2" align="center">
+		   <input type="button" value="Đồng ý" onClick="validate()&&dongy()"></td>
+    </tr>
+    <tr>
+       <td colspan="2"><p id="demo"></p></td>
+     
+    </tr>
+ </table>
+
+	</form>	
+	</div>	
+</body>
+</html>
